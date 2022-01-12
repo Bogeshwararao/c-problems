@@ -78,6 +78,7 @@ average = sum/n;
 printf("Average = %d", average); 
 return 0;  
 }
+// ARRAY PROBLEMS FROM HERE :)
 //  7) C Program for deletion of an element from the specified location from an Array
 #include <stdio.h> 
 int main()
@@ -101,3 +102,99 @@ for (i = 0; i < num; i++)
 printf("\n %d", arr[i]); 
 return (0);
 }
+// 8) C Program to delete duplicate elements from an array
+#include <stdio.h>
+int main()
+{
+int arr[20], i, j, k, size; 
+printf("\nEnter array size: "); 
+scanf("%d", &size); 
+printf("\nAccept Numbers: "); 
+for (i = 0; i < size; i++) 
+scanf("%d", &arr[i]);
+printf("\nArray with Unique list: "); 
+for (i = 0; i < size; i++)
+{
+for (j = i + 1; j < size;)
+{
+if (arr[j] == arr[i])
+{
+for (k = j; k < size; k++)
+{
+arr[k] = arr[k + 1];
+}
+size--;
+}
+else j++;
+} }
+for (i = 0; i < size; i++)
+{
+printf("%d ", arr[i]);
+}
+return (0); }
+// 9)C Program to find smallest element in an array
+#include<stdio.h> 
+int main()
+{
+int a[30], i, num, smallest; 
+printf("\nEnter no of elements :");
+scanf("%d", &num); //Read n elements in an array 
+for (i = 0; i < num; i++)
+scanf("%d", &a[i]); //Consider first element as smallest 
+smallest = a[0];
+for (i = 0; i < num; i++)
+{
+if (a[i] < smallest) { smallest = a[i];
+} }
+// Print out the Result
+printf("\nSmallest Element : %d", smallest); 
+return (0);
+}
+// 10)C Program to find largest element in an array
+#include int main()
+{
+int a[30], i, num, largest; 
+printf("\nEnter no of elements :");
+scanf("%d", &num); //Read n elements in an array 
+for (i = 0; i < num; i++)
+scanf("%d", &a[i]);
+//Consider first element as largest 
+largest = a[0];
+for (i = 0; i < num; i++)
+{
+if (a[i] > largest)
+{ largest = a[i]; }
+}
+// Print out the Result
+printf("\nLargest Element : %d", largest); 
+return (0);
+}
+// 11) C Program to reverse an array elements in an array
+#include<stdio.h> 
+int main()
+{ int arr[30], i, j, num, temp; 
+printf("\nEnter no of elements : "); 
+scanf("%d", &num);
+//Read elements in an array 
+for (i = 0; i < num; i++)
+{ scanf("%d", &arr[i]);
+}
+j = i - 1; // j will Point to last Element
+i = 0; // i will be pointing to first element 
+while (i < j)
+{
+temp = arr[i]; 
+arr[i] = arr[j]; 
+arr[j] = temp;
+i++; // increment i 
+j--; // decrement j
+}
+//Print out the Result of Insertion 
+printf("\nResult after reversal : "); 
+for (i = 0; i < num; i++)
+{
+printf("%d \n", arr[i]);
+}
+return (0);
+}
+
