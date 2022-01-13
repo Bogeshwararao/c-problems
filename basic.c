@@ -83,4 +83,72 @@ break;
 }while(x<=5); }
 // here we have done some problems in (intermediate.c) file go and check ;
 
+// strings in c 
+// 5.1) string length by using strlen();
+#include<stdio.h> 
+#include <string.h> 
+int main(){
+char ch[20]= {'c', 's', 'e', '\0'}; }; 
+printf("Length of string is: %d",strlen(ch)); 
+return 0;
+}
+//5.2) To combine strings strcat()
+#include<stdio.h> 
+#include <string.h> 
+int main(){
+char ch[10]={'h', 'e', 'l', 'l', 'o', '\0'}; 
+char ch2[10]={'c', '\0'}; 
+strcat(ch,ch2);
+printf("Value of first string is: %s",ch); 
+return 0;
+}// 5.3) To compare strings equal are not strcmp();
+#include<stdio.h> 
+#include <string.h> 
+int main(){
+char str1[20],str2[20]; 
+printf("Enter 1st string: ");
+gets(str1);//reads string from console 
+printf("Enter 2nd string: "); 
+gets(str2);
+if(strcmp(str1,str2)==0) 
+printf("Strings are equal");
+else
+printf("Strings are not equal");
+return 0;
+// 5.4) To reverse string strrev;
+#include<stdio.h>
+#include <string.h> 
+int main(){
+char str[20]; 
+printf("Enter string: ");
+gets(str);//reads string from console 
+printf("String is: %s",str); 
+printf("\nReverse String is: %s",strrev(str));
+return 0;
+}
+// 5.5) To get string upper case strupr();
+#include<stdio.h> 
+#include <string.h> 
+int main(){
+char str[20]; 
+printf("Enter string: ");
+gets(str);//reads string from console 
+printf("String is: %s",str);
+printf("\nUpper String is: %s",strupr(str)); 
+return 0;
+}
+// 5.6) To get string lower case strlwr()
+#include<stdio.h> 
+#include <string.h> 
+int main(){
+char str[20]; 
+printf("Enter string: ");
+gets(str);//reads string from console 
+printf("String is: %s",str);
+printf("\nLower String is: %s",strlwr(str)); 
+return 0;
+}
+
+
+
 
