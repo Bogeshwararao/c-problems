@@ -300,7 +300,41 @@ printf("Value of var[%d] = %d\n", i, var[i] );
 }
 return 0;
 }
+// pointers using array in strings
+#include <stdio.h> 
+const int MAX = 4; 
+int main () {
+char *names[] = { 
+"ABCD",
+"EFGH",
+"IJKL",
+"MNOP"
+};
+int i = 0;
+for ( i = 0; i < MAX; i++) {
+printf("Value of names[%d] = %s\n", i, names[i] );
+}
+return 0;
+}
 
-
+// pointers using strutures
+#include <stdio.h>
+#include <string.h>
+struct student{
+  int id;
+  char name[30];
+  float percentage;
+};
+int main(){
+  int i;
+  struct student record1={1, "abish", 99};
+  struct student *ptr;
+  ptr = &record1;
+     printf("Record of the student 1:");
+     printf("Id : %d",ptr->id);
+     printf("Name: %s",ptr->name);
+     printf("percentage : %f",ptr->percentage);
+     return 0;
+}
 
 
