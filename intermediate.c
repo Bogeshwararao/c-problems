@@ -197,4 +197,36 @@ printf("%d \n", arr[i]);
 }
 return (0);
 }
+// 12) To find the Kth smallest element in an array :)
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+int array[100],length,i,j,temp,n;
+ printf("Enter The length Of The Array ");
+scanf("%d",&length);
+printf("\nEnter The Numbers:");
+for(i=0;i<length;i++)
+ {
+ scanf("%d",&array[i]);
+ }
+for(i=0;i<length;i++)
+ {
+ for(j=0;j<length-1;j++)
+ {
+ if(array[j]>array[j+1])
+ {
+ temp=array[j];
+ array[j]=array[j+1];
+ array[j+1]=temp;
+ }
+ }
+ }
+ printf("The new array is:");
+ for(i=0;i<length;i++)
+ {
+ printf(" %d ",array[i]);
+ }
+ printf("\nEnter Which Smallest Number You want");
+ scanf("%d",&n)
 
