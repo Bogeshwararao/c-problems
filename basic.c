@@ -148,6 +148,46 @@ printf("String is: %s",str);
 printf("\nLower String is: %s",strlwr(str)); 
 return 0;
 }
+// structure from here :)
+#include<stdio.h> 
+#include <string.h> 
+struct employee
+{ int id;
+char name[50];
+}e1; //declaring e1 variable for structure //
+int main( )
+{
+//store first employee information //
+e1.id=101;
+strcpy(e1.name, "abc");//copying string into char array//
+//printing first employee information //
+printf( "employee 1 id : %d\n", e1.id);
+printf( "employee 1 name : %s\n", e1.name); 
+return 0;
+}
+// nested structure 
+#include<stdio.h>
+struct address
+{
+char city[20]; 
+int pin;
+char phone[14];
+};
+struct employee
+{
+char name[20]; 
+struct address add;
+};
+void main ()
+{
+struct employee emp;
+printf("Enter employee information?\n");
+scanf("%s %s %d %s",emp.name,emp.add.city, &emp.add.pin, emp.add.phone); 
+printf("Printing the employee information. ..\n");
+printf("name: %s\nCity: %s\nPincode: %d\nPhone: %s",emp.name,emp.add.city,emp.add. 
+pin,emp.add.phone;
+}
+
 
 
 
