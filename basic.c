@@ -165,7 +165,7 @@ printf( "employee 1 id : %d\n", e1.id);
 printf( "employee 1 name : %s\n", e1.name); 
 return 0;
 }
-// nested structure 
+// 1.1) nested structure 
 #include<stdio.h>
 struct address
 {
@@ -186,6 +186,57 @@ scanf("%s %s %d %s",emp.name,emp.add.city, &emp.add.pin, emp.add.phone);
 printf("Printing the employee information. ..\n");
 printf("name: %s\nCity: %s\nPincode: %d\nPhone: %s",emp.name,emp.add.city,emp.add. 
 pin,emp.add.phone;
+}
+//1.2)) 
+#include <stdio.h> 
+#include <string.h> 
+struct Employee
+{
+int id;
+char name[20]; 
+struct Date
+{
+int dd; 
+int mm; 
+int yyyy;
+}doj;
+}e1;
+int main( )
+{
+//storing employee information 
+e1.id=101;
+strcpy(e1.name, "Sonoo Jaiswal");//copying string into char array 
+e1.doj.dd=10;
+e1.doj.mm=11; 
+e1.doj.yyyy=2014;
+//printing first employee information 
+printf( "employee id : %d\n", e1.id); 
+printf( "employee name : %s\n", e1.name);
+printf( "employee date of joining (dd/mm/yyyy) : %d/%d/%d\n", e1.doj.dd,e1.doj.mm,e1.doj.yyyy);
+return 0;
+}
+// an array of structures that stores information of 5 students and prints it
+#include<stdio.h> 
+#include <string.h> 
+struct student{
+int rollno;
+char name[10];
+};
+int main(){ 
+int i;
+struct student st[5];
+printf("Enter Records of 5 students"); 
+for(i=0;i<5;i++){
+printf("\nEnter Rollno:");
+scanf("%d",&st[i].rollno); 
+printf("\nEnter Name:"); 
+scanf("%s",&st[i].name);
+}
+printf("\nStudent Information List:"); 
+for(i=0;i<5;i++){
+printf("\nRollno:%d, Name:%s",st[i].rollno,st[i].name);
+}
+return 0;
 }
 
 
