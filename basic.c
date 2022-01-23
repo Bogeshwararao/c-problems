@@ -263,8 +263,43 @@ printf(" Id is: %d \n", record->id);
 printf(" Name is: %s \n", record->name);
 printf(" Percentage is: %f \n", record->percentage);
 }
+// pointers in c 
+#include <stdio.h>
+void main(){
+  int a=10;
+  printf("value of the varible var is: %d", a);
+  printf("memory adress of the varible var is: %x", &a);
+}
 
-
+#include <stdio.h>
+int main()
+{
+int i = 10; // normal integer variable storing value 10 
+int *a; // since '*' is used, hence its a pointer variable 
+a = &i;
+/*
+below, address of variable 'i', which is stored 
+by a pointer variable 'a' is displayed
+*/
+printf("Address of variable i is %u\n", a);
+/*
+below, '*a' is read as 'value at a' 
+which is 10
+*/
+printf("Value at the address, which is stored by pointer variable a is %d\n",*a); 
+return 0;
+}
+// pointers using array
+#include <stdio.h> 
+const int MAX = 3; 
+int main () {
+int var[] = {10, 100, 200};
+int i;
+for (i = 0; i < MAX; i++) {
+printf("Value of var[%d] = %d\n", i, var[i] );
+}
+return 0;
+}
 
 
 
